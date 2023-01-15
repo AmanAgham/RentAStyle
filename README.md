@@ -1,57 +1,53 @@
 # Renting Shoes and Cloths
 
-##Document:
-System Requirement Specification Document
-
 ## Title:
-System Requirement Specification for Payroll Management System
+System Requirement Specification for Customer Shopping and Admin to track its eventory 
 
 ## Team: 
-Direct Customer (Employee,HR & Manager), Architect,System Analyst.
+Direct Customer (Customer, Admin(Employee/owner)), Architect,System Analyst.
 
 ## Objective (Purpose):
-Payroll software is an on-premises or cloud-based solution. This system manages, maintains, and automates payments to employees. Robust, integrated, and properly configured payroll software will  help Transflower maintain compliance with tax laws and other financial regulations, and reduce costs.
-The payroll system web application is intended to provide complete payroll structure for employee. It will enable HR to generate salaries of all employees. Employees can login into this payroll portal for monitoring their own salary structure .
-		
+Shopping software is an on-premises or cloud-based solution for Clothing item shop web application is intended to provide complete solutions for Admin as well as customers through a single get way using the internet.It will enable Admin to setup online shops, customer to browse through the shop and purchase them online 
+without having to visit the shop physically. The administration module will enable a system administrator toapprove and reject requests for new shops and maintain various lists of shop category. The Robust, integrated, and properly configured payroll software will  help Admin to maintain compliance with tax laws and other financial regulations, and reduce costs.
+
+The online shopping system will use the internet as the sole method for selling goods to its consumers.
+
 ## Scope:
-This System allows HR to maintain the employee details by modifying their salary structure.
-The System  will be able to show structure of salaries through Customized dashboard for various department employees.
-This system will allow employees to view their salary updates.
+This system allows the customer’s to maintain their cart for add or remove the product over the internet.
+This system allows the customer to track his record and show the purchase record history
+This System allows Admin to update his inventory of his store, tracks the delivery records of the customers.
+This System allows Admin to see its salesrecord.
 
 
 ## Definitions:
-	PMS: Payroll Management System
-	Portal: Personalized Online Web Application
-	KPI:Key Performance Indicator
-	Dashboard: Personalized information presented using  BI techniques such as grid, score card, graph, KPI
+	
+	SRS- Software Requirement Specification
+        GUI- Graphical User Interface
+        Stackholder- The person who will participate in system
+        Ex. Customer, Administrator, Visitor etc
 
 ## Functional Requirements:
 
-Login Access will be given to HR,Employee & Manager.
+Login Access will be given to Customer and Admin.
 
--HR Login:
+-Customer Login:
 
-Authorized HR officer will first need to login with correct credentials to access our payroll system.
-Modification access is limited only to HR person.
-HR will specify the basic salary structure of employees from all the departments.Whenever company policies are revised, salary structure will be updated accordingly for all employees.
-Time sheet will be provided to the HR by Manager on monthly basis.It will basically elaborate details about employee bio,punch-in time & punch-out time,leave record.
-Accoring to the time sheet report, salary will be calculated & payment will be released.
-If any Employee raises the query related to the payment issue , HR will request the Manager for that particular Employee Report.
-System will have settings option through which we can add the new admin or change the login credentials.
 
--Employee Login:
 
-Authorized Employee will first need to login with correct credentials.
-Employee can view his salary structure & can check the monthly salary status.
-Employees can download their salary receipt if the salary is successful.Otherwise, they can raise the complaint to the HR in case of any payment issue .
-Employee won't have modification access.
+-Admin Login:
 
--Manager Login:
 
-Manager will first need to login with correct credentials.
-Manager can view the salary structure of all employees.
-Employee Report will be provided to the HR by the Manager on demand.
-Manager won't have modification access.
+
+sir-----
+Any annonymous User will be able to view different products avaialble for sale. Any User will be able select product to view from categories avaialble. Registered shoppers will be able promote thier product for sale by adding products to the product catalog maintained by System. Staff will be able to approve or reject request for adding or removing products from product catalog by shoppers. Staff will be to track and maintain stock of products available for sale. Staff will be able to raise reqests for product updatation from product inventory.
+
+Shopper will be able request to add new product to product catalog maintained by system. Sales Team will be able to approve or eject request raised by shopper for adding or removing products from product catalog.
+
+Shopper will be able to update product details which have been already added to product catalog. Shoppers, sales team will be informed well in advaned about low stock or out of stock of products in product catalog. Product listing will be provided based their category, sale, quantity, likes, recommendations. Consumer will be able to add or remove products from shopping cart. System will maintain shopping cart for each consumer to maintain list of items selected by him/her. Consumer will be able view all items from shopping cart. Shopping Cart will present product details, number of items of product selected by consumer with price and total. Consumer will be able procees for Order placement. Registered Customer will be able place an order with the help of Shopping cart maintained by system. Registered Customer will be able to cancel placed order within 24 hours. Registered customer get orders history. Registered customer can get details of order from orderes been placed. Sales team will be able get details of orders of a particular Customer. Sales team will be able to cancel , reject or approve orders been placed by consumer due to some policies of Business. BOD will be able to summary of orders been placed , rejected from Oroder PRocessing of System. BOD will get Business insight by observing daily operations with the of getting orders information. Consumer will be provided options for payment such as through internet banking or UPI or Online payment option. Consumer will asked to submit their payment related information.Consumer will be redirected to payment gateway for secure payment transaction.On successful payment processing using payment gateway system will notify consumer about transaction and order placement status. Customer will be able track order status. Customer will be able track deliver using unique dispatcher id presented. Customer will be able accept or return delivery based on quality received. Delivery person will be able get delivery details sothat he / she can deliver product to customer end. Delivery person will be able to change the status of product delivered. Delivery vendor will be ablt to list all product delivery to be done by their staff. Sales team will be able to monitor shipment done by their vendors. Sales team will be able to track product delivery for particular customer. Customer will able to submit feedback about product they recived. Customer will able to get details about product orders placed. Customer will be cancel his placed order within 24 hours. Customer will be able to update his/ her personal information. Customer will be to manage his profile maintained by system. Customer will be able change his credentails if required. Customer will be notified about order status, delivery status through SMS, Email communication. Customer will get complete information about his orders, likes, comments, details through a dashboard. Customer will be able to update his payment related information. System will present dashboard for Customers, Vendors, Suppliers as well as BOD. Dashboard will provide information using graph, score cards, key perfomance indicators as well Grid data prestation. BOD will be informed about bussiness operations through reports. Customer will be able get thier purchase realted infomation using Customer Dashboard. Shopper will be able track thier product sale being done through online shopping portal/
+
+
+
+
 
 ## NonFunctional Requirement:
 
