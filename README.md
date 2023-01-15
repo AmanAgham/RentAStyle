@@ -7,7 +7,7 @@ System Requirement Specification for Customer Shopping and Admin to track its ev
 Direct Customer (Customer, Admin(Employee/owner)), Architect,System Analyst.
 
 ## Objective (Purpose):
-Shopping software is an on-premises or cloud-based solution for Clothing item shop web application is intended to provide complete solutions for Admin as well as customers through a single get way using the internet.It will enable Admin to setup online shops, customer to browse through the shop and purchase them online 
+Shopping software is an on-premises or cloud-based solution. This software is for renting Clothing item on web application is intended to provide complete solutions for Admin as well as customers through a single get way using the internet.It will enable Admin to setup online shops, customer to browse through the shop and purchase them online 
 without having to visit the shop physically. The administration module will enable a system administrator toapprove and reject requests for new shops and maintain various lists of shop category. The Robust, integrated, and properly configured payroll software will  help Admin to maintain compliance with tax laws and other financial regulations, and reduce costs.
 
 The online shopping system will use the internet as the sole method for selling goods to its consumers.
