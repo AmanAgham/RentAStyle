@@ -19,7 +19,6 @@ This System allows Admin to see its salesrecord.
 
 
 ## Definitions:
-	
 	SRS- Software Requirement Specification
         GUI- Graphical User Interface
         Stackholder- The person who will participate in system
