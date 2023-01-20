@@ -22,20 +22,19 @@ LastName varchar(255),
 Email varchar(255),
 Phone int);
 
-
 CREATE TABLE Product
 (
  ProductID varchar(50) primary key,
- Description varchar(50);
- Rent int,
+ Description varchar(50),
+ Price int,
  Size varchar(25),
- Condition varchar(50),
+ product_condition varchar(50),
  Quantity int
 );
 
 
 CREATE TABLE Categories(
-Categories_id varchar(50) primary key;
+Categories_id varchar(50) primary key,
 Categories_Name varchar(25),
 product_id varchar(25),
 Constraint pi_pk foreign key(product_id) references Product(ProductID)
@@ -44,23 +43,23 @@ Constraint pi_pk foreign key(product_id) references Product(ProductID)
 
 CREATE TABLE Cart
 (
- CartId int primary key;
- UserID varchar(50) foreign key,
- ProductID varchar(50) foreign key,
- Constraint ui_pk foreign key(UserID) references Cart(CartId),
- Constraint pi_pk foreign key(ProductID) references Cart(CartId)
+ CartId int primary key,
+ UserID int,
+ Constraint uu_pk foreign key(UserID) references Customer(UserID),
+ ProductID varchar(50),
+ Constraint pi1_pk foreign key(ProductID) references Product(ProductID)
 );
 
-CREATE TABLE Order
+CREATE TABLE Cust_Order
 (
  OrderId int primary key,
  Order_Date Date,
  Total_Cost Double(10,2),
  Renting_Duration int,
- UserID varchar(50) foreign key,
- ProductID varchar(50) foreign key,
- Constraint ui_pk foreign key(UserID) references Cart(CartId),
- Constraint pi_pk foreign key(ProductID) references Cart(CartId)
+ UserID int,
+ Constraint ui_pk foreign key(UserID) references Customer(UserID),
+ ProductID varchar(50),
+ Constraint pi2_pk foreign key(ProductID) references Product(ProductID)
 );
 
 
@@ -68,10 +67,10 @@ CREATE TABLE Reviews
 (
  ReviewId int primary key,
  Product_Name varchar(50),
- UserID varchar(50) foreign key,
- ProductID varchar(50) foreign key,
- Constraint ui_pk foreign key(UserID) references Cart(CartId),
- Constraint pi_pk foreign key(ProductID) references Cart(CartId)
+ UserID int,
+ ProductID varchar(50),
+ Constraint ui1_pk foreign key(UserID) references Customer(UserID),
+ Constraint pi3_pk foreign key(ProductID) references Product(ProductID)
 );
 
 CREATE TABLE Purchase
@@ -79,12 +78,12 @@ CREATE TABLE Purchase
  purchase_id int primary key,
  purchase_date Date,
  renting_date Date,
- OrderId varchar(50) foreign key,
- UserID varchar(50) foreign key,
- ProductID varchar(50) foreign key,
- Constraint oi_pk foreign key(OrderId) references Cart(CartId),
- Constraint ui_pk foreign key(UserID) references Cart(CartId),
- Constraint pi_pk foreign key(ProductID) references Cart(CartId)
+ OrderId int ,
+ UserID int,
+ ProductID varchar(50) ,
+ Constraint oi_pk foreign key(OrderId) references Cust_Order(OrderId),
+ Constraint ui4_pk foreign key(UserID) references Customer(UserID),
+ Constraint pi4pk foreign key(ProductID) references Product(ProductID)
 );
 
 
@@ -95,12 +94,12 @@ CREATE TABLE Payment
  payment_amount double(15,2),
  Payment_method varchar(50),
  payment_status varchar(50),
- OrderId varchar(50) foreign key,
- UserID varchar(50) foreign key,
- ProductID varchar(50) foreign key,
- Constraint oi_pk foreign key(OrderId) references Cart(CartId),
- Constraint ui_pk foreign key(UserID) references Cart(CartId),
- Constraint pi_pk foreign key(ProductID) references Cart(CartId)
+ OrderId int,
+ UserID int,
+ ProductID varchar(50),
+ Constraint oi1_pk foreign key(OrderId) references Cust_Order(OrderId),
+ Constraint ui5_pk foreign key(UserID) references Customer(UserID),
+ Constraint pi5_pk foreign key(ProductID) references Product(ProductID)
 );
 
 
@@ -109,8 +108,7 @@ CREATE TABLE Shipping(
  Shipping_date Date,
  Shipping_cost double(15,2),
  Payment_carrier varchar(50),
- OrderId varchar(50) foreign key,
+ OrderId int,
  Tracking_id int,
- Constraint oi_pk foreign key(OrderId) references Cart(CartId),
+ Constraint oi2_pk foreign key(OrderId) references Cust_Order(OrderId)
 );
-
