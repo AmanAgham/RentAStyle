@@ -24,24 +24,25 @@ This System allows Admin to see its salesrecord.
         Stackholder- The person who will participate in system
         Ex. Customer, Administrator, Visitor etc
 
+
 ## Functional Requirements:
 
 Login Access will be given to Customer and Admin.
 
 -Customer Login:
 
-
-
 -Admin Login:
 
 
 
-sir-----
-Any annonymous User will be able to view different products avaialble for rent. Any User will be able to select categories to view products avaialble. Admin will be to track and maintain stock of products available for sale. Staff will be able to raise reqests for product updatation from product inventory.
-
-System will maintain shopping cart for each consumer to maintain list of items selected by him/her. Consumer will be able view all items from shopping cart. Shopping Cart will present product details, number of items of product selected by consumer rental price, rent duration and total. Registered Customer will be able to place an order with the help of Shopping cart maintained by system. Registered Customer will be able to cancel placed order within 24 hours. Registered customer get orders history. Registered customer can get details of order from orderes been placed. Admin will be able to get details of orders of a particular Customer. Admin will be able to cancel , reject or approve orders been placed by consumer due to some policies of Business. Admin will be able to summarize the orders been placed , rejected from Order Processing of System and also will get Business insight by observing daily ///////. Consumer will be provided options for payment such as through internet banking or UPI or Online payment option. Consumer will have to fill their payment related information.Consumer will be redirected to payment gateway for secure payment transaction.On successful payment processing using payment gateway system will notify consumer about transaction and order placement status. Customer will be able to track their order status. Customer will be able track deliver using unique dispatcher id presented. Customer will be able accept and return delivery based on quality received. Delivery person will be able get delivery details sothat he / she can deliver product to customer end. Delivery person will be able to change the status of product delivered. Delivery vendor will be ablt to list all product delivery to be done by their staff. Sales team will be able to monitor shipment done by their vendors. Sales team will be able to track product delivery for particular customer. Customer will able to submit feedback about product they recived. Customer will able to get details about product orders placed. Customer will be cancel his placed order within 24 hours. Customer will be able to update his/ her personal information. Customer will be to manage his profile maintained by system. Customer will be able change his credentails if required. Customer will be notified about order status, delivery status through SMS, Email communication. Customer will get complete information about his orders, likes, comments, details through a dashboard. Customer will be able to update his payment related information. System will present dashboard for Customers, Vendors, Suppliers as well as BOD. Dashboard will provide information using graph, score cards, key perfomance indicators as well Grid data prestation. BOD will be informed about bussiness operations through reports. Customer will be able get thier purchase realted infomation using Customer Dashboard. Shopper will be able track thier product sale being done through online shopping portal/
+Any annonymous User will be able to view different products avaialble for rent. Any User will be able to select categories to view products avaialble. 
 
 
+Admin will be to track and maintain stock of products available for sale. Staff will be able to raise request for product updatation from product inventory.
+
+System will maintain shopping cart for each registered consumer to maintain list of items selected by him/her. Consumer will be able view all items from shopping cart. Shopping Cart will present product details, number of items of product selected by consumer rental price, rent duration and total. Registered Customer will be able to place an order with the help of Shopping cart maintained by the system. Registered Customer will be able to review order and if required cancel placed order within 24 hours. Registered customer get orders history. Registered customer can get details of order from orderes been placed. Consumer will be provided options for payment such as through internet banking or UPI or Online payment option. Consumer will have to fill their payment related information. Consumer will be redirected to payment gateway for secure payment transaction. On successful payment processing using payment gateway system will notify consumer about transaction and order placement status. Customer will be able to track their order status. Customer will be able track deliver using unique dispatcher id presented. Customer will be able to accept and initiate to return delivery based on the time alloted. Customer will able to submit feedback about product they recived. Customer will able to get details about product orders placed. Customer will be cancel his placed order within 24 hours. Customer will be able to update his/ her personal information. Customer will be to manage his profile maintained by system. Customer will be able change his credentails if required. Customer will be able to update his payment related information.
+
+Admin will be able to get details of orders of a particular Customer. Admin will be able to cancel , reject or approve orders been placed by consumer due to some policies of Business. Admin will be able to summarize the orders been placed and the order rejected from Order Processing of System They will also have provision to get Business insight by observing daily, mothly and yearly orders placed and which product is been in demand for that particular time slot. Admin will be informed about bussiness operations through reports and dashboard. Dashboard will provide information using graph, score cards, key perfomance indicators as well Grid data prestation.
 
 
 
