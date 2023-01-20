@@ -1,3 +1,4 @@
+
 CREATE TABLE Customer
 (
 UserID int primary key,
