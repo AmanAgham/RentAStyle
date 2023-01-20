@@ -22,11 +22,12 @@ LastName varchar(255),
 Email varchar(255),
 Phone int);
 
+
 CREATE TABLE Product
 (
  ProductID varchar(50) primary key,
  Description varchar(50);
- Price int,
+ Rent int,
  Size varchar(25),
  Condition varchar(50),
  Quantity int
