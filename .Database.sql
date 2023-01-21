@@ -57,10 +57,8 @@ CREATE TABLE Cust_Order
  Order_Date Date,
  Total_Cost Double(10,2),
  Renting_Duration int,
- UserID int,
- Constraint ui_pk foreign key(UserID) references Customer(UserID),
- ProductID varchar(50),
- Constraint pi2_pk foreign key(ProductID) references Product(ProductID)
+ CartId int,
+ Constraint ci_pk foreign key(CartId) references Cart(CartId)
 );
 
 
@@ -80,11 +78,9 @@ CREATE TABLE Purchase
  purchase_date Date,
  renting_date Date,
  OrderId int ,
- UserID int,
- ProductID varchar(50) ,
  Constraint oi_pk foreign key(OrderId) references Cust_Order(OrderId),
- Constraint ui4_pk foreign key(UserID) references Customer(UserID),
- Constraint pi4pk foreign key(ProductID) references Product(ProductID)
+ CartId int,
+ Constraint ci_pk foreign key(CartId) references Cart(CartId)
 );
 
 
@@ -96,11 +92,9 @@ CREATE TABLE Payment
  Payment_method varchar(50),
  payment_status varchar(50),
  OrderId int,
- UserID int,
- ProductID varchar(50),
  Constraint oi1_pk foreign key(OrderId) references Cust_Order(OrderId),
- Constraint ui5_pk foreign key(UserID) references Customer(UserID),
- Constraint pi5_pk foreign key(ProductID) references Product(ProductID)
+ CartId int,
+ Constraint ci_pk foreign key(CartId) references Cart(CartId)
 );
 
 
