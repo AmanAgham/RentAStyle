@@ -23,6 +23,11 @@ LastName varchar(255),
 Email varchar(255),
 Phone int);
 
+CREATE TABLE Categories(
+Categories_id varchar(50) primary key,
+Categories_Name varchar(25)
+);
+
 CREATE TABLE Product
 (
  ProductID varchar(50) primary key,
@@ -36,10 +41,7 @@ CREATE TABLE Product
 );
 
 
-CREATE TABLE Categories(
-Categories_id varchar(50) primary key,
-Categories_Name varchar(25),
-);
+
 
 
 CREATE TABLE Cart
@@ -58,7 +60,7 @@ CREATE TABLE Cust_Order
  Total_Cost Double(10,2),
  Renting_Duration int,
  CartId int,
- Constraint ci_fk foreign key(CartId) references Cart(CartId)
+ Constraint ci2_fk foreign key(CartId) references Cart(CartId)
 );
 
 
@@ -80,7 +82,7 @@ CREATE TABLE Purchase
  OrderId int ,
  Constraint oi_fk foreign key(OrderId) references Cust_Order(OrderId),
  CartId int,
- Constraint ci_fk foreign key(CartId) references Cart(CartId)
+ Constraint ci4_fk foreign key(CartId) references Cart(CartId)
 );
 
 
