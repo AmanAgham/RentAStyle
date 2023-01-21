@@ -67,7 +67,8 @@ CREATE TABLE Cust_Order
 CREATE TABLE Reviews
 (
  ReviewId int primary key,
- Product_Name varchar(50),
+ Reviews varchar(500),
+ Ratting varchar(5),
  UserID int,
  ProductID varchar(50),
  Constraint ui1_fk foreign key(UserID) references Customer(UserID),
