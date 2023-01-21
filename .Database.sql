@@ -30,15 +30,15 @@ CREATE TABLE Product
  Price int,
  Size varchar(25),
  product_condition varchar(50),
- Quantity int
+ Quantity int,
+ Categories_id varchar(50) ,
+ Constraint ci_fk foreign key(Categories_id) references Categories(Categories_id)
 );
 
 
 CREATE TABLE Categories(
 Categories_id varchar(50) primary key,
 Categories_Name varchar(25),
-product_id varchar(25),
-Constraint pi_pk foreign key(product_id) references Product(ProductID)
 );
 
 
@@ -46,9 +46,9 @@ CREATE TABLE Cart
 (
  CartId int primary key,
  UserID int,
- Constraint uu_pk foreign key(UserID) references Customer(UserID),
  ProductID varchar(50),
- Constraint pi1_pk foreign key(ProductID) references Product(ProductID)
+ Constraint uu_fk foreign key(UserID) references Customer(UserID),
+ Constraint pi1_fk foreign key(ProductID) references Product(ProductID)
 );
 
 CREATE TABLE Cust_Order
@@ -58,7 +58,7 @@ CREATE TABLE Cust_Order
  Total_Cost Double(10,2),
  Renting_Duration int,
  CartId int,
- Constraint ci_pk foreign key(CartId) references Cart(CartId)
+ Constraint ci_fk foreign key(CartId) references Cart(CartId)
 );
 
 
@@ -68,8 +68,8 @@ CREATE TABLE Reviews
  Product_Name varchar(50),
  UserID int,
  ProductID varchar(50),
- Constraint ui1_pk foreign key(UserID) references Customer(UserID),
- Constraint pi3_pk foreign key(ProductID) references Product(ProductID)
+ Constraint ui1_fk foreign key(UserID) references Customer(UserID),
+ Constraint pi3_fk foreign key(ProductID) references Product(ProductID)
 );
 
 CREATE TABLE Purchase
@@ -78,13 +78,13 @@ CREATE TABLE Purchase
  purchase_date Date,
  renting_date Date,
  OrderId int ,
- Constraint oi_pk foreign key(OrderId) references Cust_Order(OrderId),
+ Constraint oi_fk foreign key(OrderId) references Cust_Order(OrderId),
  CartId int,
- Constraint ci_pk foreign key(CartId) references Cart(CartId)
+ Constraint ci_fk foreign key(CartId) references Cart(CartId)
 );
 
 
-CREATE TABLE Payment
+CREATE TABLE Transaction
 (
  Payment_id int primary key,
  Payment_date Date,
@@ -92,9 +92,7 @@ CREATE TABLE Payment
  Payment_method varchar(50),
  payment_status varchar(50),
  OrderId int,
- Constraint oi1_pk foreign key(OrderId) references Cust_Order(OrderId),
- CartId int,
- Constraint ci_pk foreign key(CartId) references Cart(CartId)
+ Constraint oi1_fk foreign key(OrderId) references Cust_Order(OrderId)
 );
 
 
@@ -105,5 +103,5 @@ CREATE TABLE Shipping(
  Payment_carrier varchar(50),
  OrderId int,
  Tracking_id int,
- Constraint oi2_pk foreign key(OrderId) references Cust_Order(OrderId)
+ Constraint oi2_fk foreign key(OrderId) references Cust_Order(OrderId)
 );
