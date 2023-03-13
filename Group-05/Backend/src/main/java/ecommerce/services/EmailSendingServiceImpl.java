@@ -27,17 +27,18 @@ public class EmailSendingServiceImpl implements IEmailSEndingService {
 
 		// setup of mail server
 		properties.putIfAbsent("mail.smtp.host", "smtp.gmail.com");
-		properties.putIfAbsent("mail.smtp.port", "465");
+		properties.put("mail.smtp.port", "587");
 		properties.putIfAbsent("mail.smtp.ssl.enable", "true");
-		properties.putIfAbsent("mail.smtp.auth", "true");
+		properties.put("mail.smtp.auth", "false");
+//		properties.put("mail.smtp.auth", "false");
 
 		Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
 		  	protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication(from, "mcvspvvtowgxzodq"); 
+				return new PasswordAuthentication(from, "ueoozwgagfdptaen"); 
 			}
 		});
 
-		// used to debug smtp issues
+		// used to debug smtp issues"
 		session.setDebug(true);
 
 		try {
@@ -58,10 +59,8 @@ public class EmailSendingServiceImpl implements IEmailSEndingService {
 
 			// set the message body
 			message.setText(messageBody);
-//			message.setDescription(messageBody);
+			message.setDescription(messageBody);
 			message.setContent(messageBody, "text/html");
-			
-			
 			
 
 			// sending mail
